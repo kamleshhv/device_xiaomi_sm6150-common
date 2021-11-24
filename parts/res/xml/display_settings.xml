@@ -12,6 +12,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+<<<<<<< HEAD
 <<<<<<<< HEAD:overlay-aosp/frameworks/base/core/res/res/values/config.xml
 <resources>
     <!-- The list of package IDs that are allowed to use aux cameras.
@@ -24,6 +25,12 @@
 </resources>
 ========
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+=======
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/display_settings_title">
+
+>>>>>>> ae9cb19 (sm6150-common: parts: Adapt HBM and DC dimming settings to S style)
     <SwitchPreference
         android:key="dc_dimming_enable"
         android:defaultValue="false"
