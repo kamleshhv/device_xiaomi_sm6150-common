@@ -44,6 +44,8 @@ PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
 
 # Audio
+$(call inherit-product, vendor/dolby/config.mk)
+
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
