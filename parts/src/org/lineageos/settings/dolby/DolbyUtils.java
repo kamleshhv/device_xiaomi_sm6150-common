@@ -176,10 +176,14 @@ public final class DolbyUtils {
 =======
         Log.i(TAG, "setDsOn: " + on);
         mDolbyAtmos.setDsOn(on);
+<<<<<<< HEAD
         if (on) {
             refreshPlaybackIfNecessary();
         }
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+        refreshPlaybackIfNecessary();
+>>>>>>> 92d341b (marble: parts: Always refresh playback if status changed)
     }
 
     public boolean getDsOn() {
