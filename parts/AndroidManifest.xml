@@ -93,11 +93,15 @@
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
             </intent-filter>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f767c45 (marble: parts: Override MusicFX and handle EQ intent)
             <intent-filter>
                 <action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.CATEGORY_CONTENT_MUSIC" />
             </intent-filter>
+<<<<<<< HEAD
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
             <meta-data android:name="com.android.settings.summary_uri"
@@ -105,6 +109,8 @@
 =======
 >>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
 =======
+=======
+>>>>>>> f767c45 (marble: parts: Override MusicFX and handle EQ intent)
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
             <meta-data android:name="com.android.settings.summary"
