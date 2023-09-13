@@ -113,9 +113,14 @@
 >>>>>>> f767c45 (marble: parts: Override MusicFX and handle EQ intent)
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
+<<<<<<< HEAD
             <meta-data android:name="com.android.settings.summary"
                        android:resource="@string/dolby_summary" />
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+            <meta-data android:name="com.android.settings.summary_uri"
+                       android:value="content://org.lineageos.settings.device.summary/dolby" />
+>>>>>>> dd2acc8 (marble: parts: Set proper summary for dolby settings)
         </activity>
 
         <provider

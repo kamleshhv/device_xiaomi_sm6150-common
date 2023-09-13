@@ -9,19 +9,28 @@ public class DolbyTileService extends TileService {
     public void onStartListening() {
         Tile tile = getQsTile();
 <<<<<<< HEAD
+<<<<<<< HEAD
         DolbyUtils dolbyUtils = DolbyUtils.getInstance(getApplicationContext());
         if (dolbyUtils.getDsOn()) {
 =======
         if (DolbyUtils.getInstance(getApplicationContext()).getDsOn()) {
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+        DolbyUtils dolbyUtils = DolbyUtils.getInstance(getApplicationContext());
+        if (dolbyUtils.getDsOn()) {
+>>>>>>> dd2acc8 (marble: parts: Set proper summary for dolby settings)
             tile.setState(Tile.STATE_ACTIVE);
         } else {
             tile.setState(Tile.STATE_INACTIVE);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         tile.setSubtitle(dolbyUtils.getProfileName());
 =======
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+        tile.setSubtitle(dolbyUtils.getProfileName());
+>>>>>>> dd2acc8 (marble: parts: Set proper summary for dolby settings)
         tile.updateTile();
         super.onStartListening();
     }
