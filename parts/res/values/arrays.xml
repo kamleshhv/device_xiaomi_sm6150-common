@@ -180,6 +180,9 @@
         <item>40,24,8,8,8,-4,-16,-12,-8,-32,-56,-24,8,8,8,8,8,8,8,8</item>
     </string-array>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
 
     <string-array name="dolby_dialogue_entries">
         <item>@string/dolby_off</item>
@@ -197,23 +200,35 @@
         <item>12</item>
     </string-array>
 
+<<<<<<< HEAD
     <string-array name="dolby_virtualizer_entries">
         <item>@string/dolby_off</item>
+=======
+    <string-array name="dolby_stereo_entries">
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
         <item>@string/dolby_low</item>
         <item>@string/dolby_medium</item>
         <item>@string/dolby_high</item>
         <item>@string/dolby_max</item>
     </string-array>
 
+<<<<<<< HEAD
     <string-array name="dolby_virtualizer_values">
         <item>0</item>
+=======
+    <string-array name="dolby_stereo_values">
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
         <item>4</item>
         <item>24</item>
         <item>44</item>
         <item>64</item>
     </string-array>
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
 =======
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
 </resources>

@@ -23,6 +23,7 @@ import android.content.Context;
 import android.util.Log;
 
 import org.lineageos.settings.R;
+<<<<<<< HEAD
 =======
 import android.content.Context;
 import android.util.Log;
@@ -33,6 +34,9 @@ import android.view.KeyEvent;
 >>>>>>> dc54f9d (marble: parts: Remove play/pause hack while toggling Dolby)
 
 import org.lineageos.settings.R;
+=======
+import org.lineageos.settings.dolby.DolbyConstants.DsParam;
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
 
 import java.util.Arrays;
 import java.util.List;
@@ -41,10 +45,14 @@ public final class DolbyUtils {
 
     private static final String TAG = "DolbyUtils";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     private static final String DEFAULT_PRESET = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0";
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
     private static final int EFFECT_PRIORITY = 100;
+    private static final int VOLUME_LEVELER_AMOUNT = 2;
 
     private static DolbyUtils mInstance;
     private DolbyAtmos mDolbyAtmos;
@@ -66,10 +74,14 @@ public final class DolbyUtils {
         mContext = context;
         mDolbyAtmos = new DolbyAtmos(EFFECT_PRIORITY, 0);
 <<<<<<< HEAD
+<<<<<<< HEAD
         mMediaSessionManager = context.getSystemService(MediaSessionManager.class);
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
 =======
 >>>>>>> dc54f9d (marble: parts: Remove play/pause hack while toggling Dolby)
+=======
+        mDolbyAtmos.setEnabled(mDolbyAtmos.getDsOn());
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
     }
 
     public static synchronized DolbyUtils getInstance(Context context) {
@@ -80,6 +92,7 @@ public final class DolbyUtils {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     public void onBootCompleted() {
         Log.i(TAG, "onBootCompleted");
@@ -88,6 +101,8 @@ public final class DolbyUtils {
     }
 
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
     private void checkEffect() {
         if (!mDolbyAtmos.hasControl()) {
             Log.w(TAG, "lost control, recreating effect");
@@ -99,10 +114,14 @@ public final class DolbyUtils {
     public void setDsOn(boolean on) {
         checkEffect();
 <<<<<<< HEAD
+<<<<<<< HEAD
         Log.d(TAG, "setDsOn: " + on);
         mDolbyAtmos.setDsOn(on);
 =======
         Log.i(TAG, "setDsOn: " + on);
+=======
+        Log.d(TAG, "setDsOn: " + on);
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
         mDolbyAtmos.setDsOn(on);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -120,25 +139,34 @@ public final class DolbyUtils {
     public boolean getDsOn() {
         boolean on = mDolbyAtmos.getDsOn();
 <<<<<<< HEAD
+<<<<<<< HEAD
         Log.d(TAG, "getDsOn: " + on);
 =======
         Log.i(TAG, "getDsOn: " + on);
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+        Log.d(TAG, "getDsOn: " + on);
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
         return on;
     }
 
     public void setProfile(int index) {
         checkEffect();
 <<<<<<< HEAD
+<<<<<<< HEAD
         Log.d(TAG, "setProfile: " + index);
 =======
         Log.i(TAG, "setProfile: " + index);
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+        Log.d(TAG, "setProfile: " + index);
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
         mDolbyAtmos.setProfile(index);
     }
 
     public int getProfile() {
         int profile = mDolbyAtmos.getProfile();
+<<<<<<< HEAD
 <<<<<<< HEAD
         Log.d(TAG, "getProfile: " + profile);
         return profile;
@@ -225,6 +253,9 @@ public final class DolbyUtils {
         return enabled;
 =======
         Log.i(TAG, "getProfile: " + profile);
+=======
+        Log.d(TAG, "getProfile: " + profile);
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
         return profile;
     }
 
@@ -233,16 +264,112 @@ public final class DolbyUtils {
         List<String> profiles = Arrays.asList(mContext.getResources().getStringArray(
                 R.array.dolby_profile_values));
         int profileIndex = profiles.indexOf(profile);
-        Log.i(TAG, "getProfileAsString: profile=" + profile + " index=" + profileIndex);
+        Log.d(TAG, "getProfileName: profile=" + profile + " index=" + profileIndex);
         return profileIndex == -1 ? null : mContext.getResources().getStringArray(
                 R.array.dolby_profile_entries)[profileIndex];
+    }
+
+    public void resetProfileSpecificSettings() {
+        checkEffect();
+        mDolbyAtmos.resetProfileSpecificSettings();
     }
 
     public void setPreset(String preset) {
         checkEffect();
         int[] gains = Arrays.stream(preset.split(",")).mapToInt(Integer::parseInt).toArray();
+<<<<<<< HEAD
         Log.i(TAG, "setPreset: " + Arrays.toString(gains));
         mDolbyAtmos.setGeqBandGains(gains);
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
+=======
+        Log.d(TAG, "setPreset: " + Arrays.toString(gains));
+        mDolbyAtmos.setDapParameter(DsParam.GEQ_BAND_GAINS, gains);
+    }
+
+    public String getPreset() {
+        int[] gains = mDolbyAtmos.getDapParameter(DsParam.GEQ_BAND_GAINS);
+        Log.d(TAG, "getPreset: " + Arrays.toString(gains));
+        String[] preset = Arrays.stream(gains).mapToObj(String::valueOf).toArray(String[]::new);
+        return String.join(",", preset);
+    }
+
+    public void setHeadphoneVirtualizerEnabled(boolean enable) {
+        checkEffect();
+        Log.d(TAG, "setHeadphoneVirtualizerEnabled: " + enable);
+        mDolbyAtmos.setDapParameterBool(DsParam.HEADPHONE_VIRTUALIZER, enable);
+    }
+
+    public boolean getHeadphoneVirtualizerEnabled() {
+        boolean enabled = mDolbyAtmos.getDapParameterBool(DsParam.HEADPHONE_VIRTUALIZER);
+        Log.d(TAG, "getHeadphoneVirtualizerEnabled: " + enabled);
+        return enabled;
+    }
+
+    public void setSpeakerVirtualizerEnabled(boolean enable) {
+        checkEffect();
+        Log.d(TAG, "setSpeakerVirtualizerEnabled: " + enable);
+        mDolbyAtmos.setDapParameterBool(DsParam.SPEAKER_VIRTUALIZER, enable);
+    }
+
+    public boolean getSpeakerVirtualizerEnabled() {
+        boolean enabled = mDolbyAtmos.getDapParameterBool(DsParam.SPEAKER_VIRTUALIZER);
+        Log.d(TAG, "getSpeakerVirtualizerEnabled: " + enabled);
+        return enabled;
+    }
+
+    public void setStereoWideningAmount(int amount) {
+        checkEffect();
+        Log.d(TAG, "setStereoWideningAmount: " + amount);
+        mDolbyAtmos.setDapParameterInt(DsParam.STEREO_WIDENING_AMOUNT, amount);
+    }
+
+    public int getStereoWideningAmount() {
+        int amount = mDolbyAtmos.getDapParameterInt(DsParam.STEREO_WIDENING_AMOUNT);
+        Log.d(TAG, "getStereoWideningAmount: " + amount);
+        return amount;
+    }
+
+    public void setDialogueEnhancerAmount(int amount) {
+        checkEffect();
+        Log.d(TAG, "setDialogueEnhancerAmount: " + amount);
+        mDolbyAtmos.setDapParameterBool(DsParam.DIALOGUE_ENHANCER_ENABLE, amount > 0);
+        mDolbyAtmos.setDapParameterInt(DsParam.DIALOGUE_ENHANCER_AMOUNT, amount);
+    }
+
+    public int getDialogueEnhancerAmount() {
+        boolean enabled = mDolbyAtmos.getDapParameterBool(
+                DsParam.DIALOGUE_ENHANCER_ENABLE);
+        int amount = enabled ? mDolbyAtmos.getDapParameterInt(
+                DsParam.DIALOGUE_ENHANCER_AMOUNT) : 0;
+        Log.d(TAG, "getDialogueEnhancerAmount: " + enabled + " amount=" + amount);
+        return amount;
+    }
+
+    public void setBassEnhancerEnabled(boolean enable) {
+        checkEffect();
+        Log.d(TAG, "setBassEnhancerEnabled: " + enable);
+        mDolbyAtmos.setDapParameterBool(DsParam.BASS_ENHANCER_ENABLE, enable);
+    }
+
+    public boolean getBassEnhancerEnabled() {
+        boolean enabled = mDolbyAtmos.getDapParameterBool(DsParam.BASS_ENHANCER_ENABLE);
+        Log.d(TAG, "getBassEnhancerEnabled: " + enabled);
+        return enabled;
+    }
+
+    public void setVolumeLevelerEnabled(boolean enable) {
+        checkEffect();
+        Log.d(TAG, "setVolumeLevelerEnabled: " + enable);
+        mDolbyAtmos.setDapParameterBool(DsParam.VOLUME_LEVELER_ENABLE, enable);
+        mDolbyAtmos.setDapParameterInt(DsParam.VOLUME_LEVELER_AMOUNT,
+                enable ? VOLUME_LEVELER_AMOUNT : 0);
+    }
+
+    public boolean getVolumeLevelerEnabled() {
+        boolean enabled = mDolbyAtmos.getDapParameterBool(DsParam.VOLUME_LEVELER_ENABLE);
+        int amount = mDolbyAtmos.getDapParameterInt(DsParam.VOLUME_LEVELER_AMOUNT);
+        Log.d(TAG, "getVolumeLevelerEnabled: " + enabled + " amount=" + amount);
+        return enabled && (amount == VOLUME_LEVELER_AMOUNT);
+>>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
     }
 }
