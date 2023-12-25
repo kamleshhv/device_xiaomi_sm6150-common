@@ -106,6 +106,7 @@
     <string name="haptic_level_title">Level</string>
     <string name="haptic_level_summary">Amount of vibration intensity</string>
     <string name="haptic_level_summary_incompatible">Feature not supported</string>
+<<<<<<< HEAD
 
     <!-- Dolby Atmos -->
     <string name="dolby_title">Dolby Atmos</string>
@@ -130,4 +131,6 @@
     <string name="dolby_reset_profile">Reset to defaults</string>
     <string name="dolby_reset_profile_toast">Succesfully reset settings for %1$s profile</string>
 
+=======
+>>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
 </resources>
