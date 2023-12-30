@@ -161,7 +161,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 
 # Sepolicy
 TARGET_SEPOLICY_DIR := msmsteppe
-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
+include device/qcom/sepolicy_vndr/legacy-um/SEPolicy.mk
 
 
 
