@@ -21,14 +21,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-<<<<<<< HEAD
 import android.util.Log;
-=======
-import android.os.IBinder;
-import android.util.Log;
-import android.view.Display.HdrCapabilities;
-import android.view.SurfaceControl;
->>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
 
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.dirac.DiracUtils;
@@ -44,8 +37,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
 
-    private static final String TAG = "XiaomiParts-BCR";
-
     @Override
     public void onReceive(final Context context, Intent intent) {
         if (!intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
@@ -55,8 +46,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             Log.d(TAG, "Received boot completed intent");
 	// Doze
         DozeUtils.onBootCompleted(context);
-
-        Log.i(TAG, "Boot completed");
 
         // Dirac
 <<<<<<< HEAD
@@ -72,12 +61,8 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         // DiracUtils.onBootCompleted(context);
 
         // Dolby Atmos
-<<<<<<< HEAD
         DolbyUtils.getInstance(context).onBootCompleted();
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
-=======
-        DolbyUtils.getInstance(context);
->>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
 
         // Thermal Profiles
         ThermalUtils.startService(context);

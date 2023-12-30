@@ -33,9 +33,6 @@
         android:icon="@drawable/ic_dolby" />
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
     <PreferenceCategory
         android:title="@string/dolby_category_settings">
 
@@ -45,7 +42,6 @@
             android:entryValues="@array/dolby_preset_values"
             android:title="@string/dolby_preset" />
 
-<<<<<<< HEAD
         <ListPreference
             android:key="dolby_virtualizer"
             android:entries="@array/dolby_virtualizer_entries"
@@ -54,21 +50,6 @@
             android:title="@string/dolby_virtualizer" />
 
         <ListPreference
-=======
-        <SwitchPreference
-            android:key="dolby_virtualizer"
-            android:title="@string/dolby_virtualizer" />
-
-        <ListPreference
-            android:key="dolby_stereo"
-            android:entries="@array/dolby_stereo_entries"
-            android:entryValues="@array/dolby_stereo_values"
-            android:defaultValue="4"
-            android:title="@string/dolby_stereo_widening"
-            android:dependency="dolby_virtualizer" />
-
-        <ListPreference
->>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
             android:key="dolby_dialogue"
             android:entries="@array/dolby_dialogue_entries"
             android:entryValues="@array/dolby_dialogue_values"
@@ -87,7 +68,6 @@
             android:title="@string/dolby_reset_profile" />
 
     </PreferenceCategory>
-<<<<<<< HEAD
 =======
     <ListPreference
         android:key="dolby_preset"
@@ -98,7 +78,5 @@
         android:summary="%s"
         android:icon="@drawable/ic_dirac_preset"/>
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
-=======
->>>>>>> abcff4f (marble: parts: Implement profile-specific Dolby settings)
 
 </PreferenceScreen>
