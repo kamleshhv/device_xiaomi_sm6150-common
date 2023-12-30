@@ -48,14 +48,10 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String TAG = "XiaomiParts-BCR";
 =======
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display/msm_fb_ea_enable";
+    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl";
     private static final String HBM_ENABLE_KEY = "hbm_mode";
-<<<<<<< HEAD
     private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm";
 >>>>>>> 90602dd (sm6150-common: parts: Implement HBM switch)
-=======
-    private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display/hbm";
->>>>>>> cfd5055 (sm6150-common: parts: Set correct paths for DC dimming and HBM)
 
     @Override
     public void onReceive(final Context context, Intent intent) {
