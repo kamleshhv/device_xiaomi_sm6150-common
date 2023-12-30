@@ -200,25 +200,6 @@
                        android:resource="@string/haptic_summary" />
         </activity>
 
-<<<<<<< HEAD
-=======
-        <activity
-            android:name=".display.DisplaySettingsActivity"
-            android:label="@string/display_settings_title"
-            android:theme="@style/Theme.Main">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-            </intent-filter>
-
-            <meta-data
-                android:name="com.android.settings.category"
-                android:value="com.android.settings.category.ia.display" />
-            <meta-data
-                android:name="com.android.settings.summary"
-                android:resource="@string/display_settings_summary" />
-        </activity>
-
->>>>>>> 90602dd (sm6150-common: parts: Implement HBM switch)
     </application>
 </manifest>
 

@@ -12,7 +12,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<<<<<<<< HEAD:overlay-aosp/frameworks/base/core/res/res/values/config.xml
 <resources>
     <!-- The list of package IDs that are allowed to use aux cameras.
          NOTE: If this list is empty then all apps will be able to use aux cameras. -->
@@ -22,18 +21,3 @@
         <item>org.lineageos.aperture.dev</item>
     </string-array>
 </resources>
-========
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <SwitchPreference
-        android:key="dc_dimming_enable"
-        android:defaultValue="false"
-        android:title="@string/dc_dimming_enable_title"
-        android:summary="@string/dc_dimming_enable_summary" />
-
-    <SwitchPreference
-        android:key="hbm_mode"
-        android:defaultValue="false"
-        android:title="@string/hbm_mode_title"
-        android:summary="@string/hbm_mode_summary" />
-</PreferenceScreen>
->>>>>>>> 90602dd (sm6150-common: parts: Implement HBM switch):parts/res/xml/display_settings.xml

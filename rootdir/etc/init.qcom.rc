@@ -135,16 +135,6 @@ on boot
     enable vendor.dataqti
     enable vendor.dataadpl
 
-<<<<<<< HEAD
-=======
-    # Allow system to modify exposure adjustment state
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl
-
-    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm
-    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm
-
->>>>>>> 90602dd (sm6150-common: parts: Implement HBM switch)
 on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics

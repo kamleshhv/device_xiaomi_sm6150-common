@@ -43,15 +43,8 @@ import org.lineageos.settings.haptic.HapticUtils;
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
     private static final String TAG = "XiaomiParts";
-<<<<<<< HEAD
 
     private static final String TAG = "XiaomiParts-BCR";
-=======
-    private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
-    private static final String DC_DIMMING_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_bl";
-    private static final String HBM_ENABLE_KEY = "hbm_mode";
-    private static final String HBM_NODE = "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_hbm";
->>>>>>> 90602dd (sm6150-common: parts: Implement HBM switch)
 
     @Override
     public void onReceive(final Context context, Intent intent) {
@@ -91,15 +84,5 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Haptic
         HapticUtils.restoreLevel(context);
-<<<<<<< HEAD
-=======
-
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-
-        boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);
-        FileUtils.writeLine(DC_DIMMING_NODE, dcDimmingEnabled ? "1" : "0");
-        boolean hbmEnabled = sharedPrefs.getBoolean(HBM_ENABLE_KEY, false);
-        FileUtils.writeLine(HBM_NODE, hbmEnabled ? "1" : "0");
->>>>>>> 90602dd (sm6150-common: parts: Implement HBM switch)
     }
 }

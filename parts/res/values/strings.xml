@@ -159,17 +159,5 @@
     <string name="dolby_reset_profile">Reset to defaults</string>
     <string name="dolby_reset_profile_toast">Succesfully reset settings for %1$s profile</string>
 
-<<<<<<< HEAD
 >>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
-=======
-    <!--Display settings fragment -->
-    <string name="display_settings_title">Custom display settings</string>
-    <string name="display_settings_summary">HBM, DC Dimming</string>
-
-    <!-- HBM settings -->
-    <string name="hbm_mode_title">High Brightness Mode</string>
-    <string name="hbm_mode_summary">High Brightness Mode allows the display panel brightness to go above the maximum stock value. Which helps in improving visibility in direct sunlight</string>
-    <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
-
->>>>>>> 90602dd (sm6150-common: parts: Implement HBM switch)
 </resources>
