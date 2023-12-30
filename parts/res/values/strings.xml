@@ -164,7 +164,7 @@
 =======
     <!--Display settings fragment -->
     <string name="display_settings_title">Custom display settings</string>
-    <string name="display_settings_summary">DC Dimming, High Brightness Mode</string>
+    <string name="display_settings_summary">HBM, DC Dimming</string>
 
     <!-- HBM settings -->
     <string name="hbm_mode_title">High Brightness Mode</string>
