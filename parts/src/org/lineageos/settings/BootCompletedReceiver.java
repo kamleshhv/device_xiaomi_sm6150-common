@@ -25,11 +25,6 @@ import android.util.Log;
 
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.dirac.DiracUtils;
-<<<<<<< HEAD
-=======
-import org.lineageos.settings.dolby.DolbyUtils;
-import org.lineageos.settings.doze.PocketService;
->>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.haptic.HapticUtils;
 
@@ -49,7 +44,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Dirac
 <<<<<<< HEAD
-<<<<<<< HEAD
         // DiracUtils.onBootCompleted(context);
 
         // Dolby Atmos
@@ -57,12 +51,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 =======
         DiracUtils.onBootCompleted(context);
 >>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
-=======
-        // DiracUtils.onBootCompleted(context);
-
-        // Dolby Atmos
-        DolbyUtils.getInstance(context).onBootCompleted();
->>>>>>> b194474 (marble: parts: Introduce Dolby Atmos)
 
         // Thermal Profiles
         ThermalUtils.startService(context);
