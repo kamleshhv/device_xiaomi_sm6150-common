@@ -68,19 +68,7 @@
                        android:resource="@string/dirac_summary" />
         </activity-->
 
-        <activity
-            android:name=".dolby.DolbyActivity"
-            android:exported="false"
-            android:label="@string/dolby_title"
-            android:theme="@style/Theme.SubSettingsBase">
-            <intent-filter>
-                <action android:name="com.android.settings.action.IA_SETTINGS" />
-                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
-            </intent-filter>
-<<<<<<< HEAD
-=======
 
->>>>>>> parent of 06ea545 (sm6150-common: parts: Override MusicFX and handle EQ intent)
             <intent-filter>
                 <action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -88,17 +76,6 @@
             </intent-filter>
             <meta-data android:name="com.android.settings.category"
                        android:value="com.android.settings.category.ia.sound" />
-            <meta-data android:name="com.android.settings.summary_uri"
-                       android:value="content://org.lineageos.settings.device.summary/dolby" />
-<<<<<<< HEAD
-
-            <meta-data android:name="com.android.settings.category"
-                       android:value="com.android.settings.category.ia.sound" />
-            <meta-data android:name="com.android.settings.summary_uri"
-                       android:value="content://org.lineageos.settings.device.summary/dolby" />
-=======
->>>>>>> parent of 1ff3778 (sm6150-common: parts: Introduce Dolby Atmos)
-        </activity>
 
         <provider
             android:name=".SummaryProvider"

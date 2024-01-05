@@ -11,11 +11,15 @@ public class DolbyTileService extends TileService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of c8f9211 (sm6150-common: parts: Set proper summary for dolby settings)
         DolbyUtils dolbyUtils = DolbyUtils.getInstance(getApplicationContext());
         if (dolbyUtils.getDsOn()) {
 =======
         if (DolbyUtils.getInstance(getApplicationContext()).getDsOn()) {
 >>>>>>> dc22fa2 (sm6150-common: parts: Introduce Dolby Atmos)
+<<<<<<< HEAD
 =======
         DolbyUtils dolbyUtils = DolbyUtils.getInstance(getApplicationContext());
         if (dolbyUtils.getDsOn()) {
@@ -24,6 +28,8 @@ public class DolbyTileService extends TileService {
         DolbyUtils dolbyUtils = DolbyUtils.getInstance(getApplicationContext());
         if (dolbyUtils.getDsOn()) {
 >>>>>>> parent of 1ff3778 (sm6150-common: parts: Introduce Dolby Atmos)
+=======
+>>>>>>> parent of c8f9211 (sm6150-common: parts: Set proper summary for dolby settings)
             tile.setState(Tile.STATE_ACTIVE);
         } else {
             tile.setState(Tile.STATE_INACTIVE);
@@ -31,6 +37,7 @@ public class DolbyTileService extends TileService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         tile.setSubtitle(dolbyUtils.getProfileName());
 =======
 >>>>>>> dc22fa2 (sm6150-common: parts: Introduce Dolby Atmos)
@@ -40,6 +47,11 @@ public class DolbyTileService extends TileService {
 =======
         tile.setSubtitle(dolbyUtils.getProfileName());
 >>>>>>> parent of 1ff3778 (sm6150-common: parts: Introduce Dolby Atmos)
+=======
+        tile.setSubtitle(dolbyUtils.getProfileName());
+=======
+>>>>>>> dc22fa2 (sm6150-common: parts: Introduce Dolby Atmos)
+>>>>>>> parent of c8f9211 (sm6150-common: parts: Set proper summary for dolby settings)
         tile.updateTile();
         super.onStartListening();
     }
