@@ -77,6 +77,10 @@
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
                 <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES"/>
             </intent-filter>
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 06ea545 (sm6150-common: parts: Override MusicFX and handle EQ intent)
             <intent-filter>
                 <action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL" />
                 <category android:name="android.intent.category.DEFAULT" />
