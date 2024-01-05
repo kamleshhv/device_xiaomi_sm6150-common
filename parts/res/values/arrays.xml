@@ -126,6 +126,7 @@
         <item>3</item>
     </string-array>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <!-- Dolby Atmos -->
     <string-array name="dolby_profile_entries">
@@ -208,6 +209,8 @@
         <item>44</item>
         <item>64</item>
     </string-array>
+=======
+>>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
 =======
 >>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
 </resources>

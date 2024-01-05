@@ -66,7 +66,6 @@
                        android:value="com.android.settings.category.ia.sound" />
             <meta-data android:name="com.android.settings.summary"
                        android:resource="@string/dirac_summary" />
-<<<<<<< HEAD
         </activity-->
 
         <activity
@@ -87,8 +86,6 @@
                        android:value="com.android.settings.category.ia.sound" />
             <meta-data android:name="com.android.settings.summary_uri"
                        android:value="content://org.lineageos.settings.device.summary/dolby" />
-=======
->>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
         </activity>
 
         <provider

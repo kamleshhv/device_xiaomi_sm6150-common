@@ -107,6 +107,7 @@
     <string name="haptic_level_summary">Amount of vibration intensity</string>
     <string name="haptic_level_summary_incompatible">Feature not supported</string>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     <!-- Dolby Atmos -->
     <string name="dolby_title">Dolby Atmos</string>
@@ -153,4 +154,6 @@
     <string name="hbm_enable_summary_not_supported">HBM is not currently supported by the kernel</string>
 
 >>>>>>> c38c878 (sm6150-common: parts: Implement HBM switch)
+=======
+>>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
 </resources>

@@ -51,10 +51,14 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         // Dirac
 <<<<<<< HEAD
+<<<<<<< HEAD
         // DiracUtils.onBootCompleted(context);
 
         // Dolby Atmos
         DolbyUtils.getInstance(context);
+=======
+        DiracUtils.onBootCompleted(context);
+>>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
 =======
         DiracUtils.onBootCompleted(context);
 >>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
