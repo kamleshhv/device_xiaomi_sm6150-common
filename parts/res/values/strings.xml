@@ -108,7 +108,6 @@
     <string name="haptic_level_summary_incompatible">Feature not supported</string>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
     <!-- Dolby Atmos -->
     <string name="dolby_title">Dolby Atmos</string>
@@ -157,6 +156,7 @@
 >>>>>>> c38c878 (sm6150-common: parts: Implement HBM switch)
 =======
 >>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
+<<<<<<< HEAD
 =======
 
     <!-- Dolby Atmos -->
@@ -169,4 +169,6 @@
     <string name="dolby_on_with_profile">On (%1$s)</string>
 
 >>>>>>> dc22fa2 (sm6150-common: parts: Introduce Dolby Atmos)
+=======
+>>>>>>> parent of 1ff3778 (sm6150-common: parts: Introduce Dolby Atmos)
 </resources>

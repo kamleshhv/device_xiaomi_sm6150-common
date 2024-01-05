@@ -127,9 +127,6 @@
     </string-array>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> dc22fa2 (sm6150-common: parts: Introduce Dolby Atmos)
 
     <!-- Dolby Atmos -->
     <string-array name="dolby_profile_entries">
@@ -180,7 +177,6 @@
         <item>50,34,18,2,-14,-6,2,-2,-6,-26,-46,-26,-6,-2,2,2,2,2,2,2</item>
         <item>40,24,8,8,8,-4,-16,-12,-8,-32,-56,-24,8,8,8,8,8,8,8,8</item>
     </string-array>
-<<<<<<< HEAD
 
     <string-array name="dolby_dialogue_entries">
         <item>@string/dolby_off</item>
@@ -217,6 +213,4 @@
 >>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
 =======
 >>>>>>> parent of 532e08c (sm6150-common: parts: Introduce Dolby Atmos)
-=======
->>>>>>> dc22fa2 (sm6150-common: parts: Introduce Dolby Atmos)
 </resources>
